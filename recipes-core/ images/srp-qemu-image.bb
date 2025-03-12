@@ -2,15 +2,10 @@ SUMMARY = "SRP Platform image"
 
 IMAGE_INSTALL = "packagegroup-core-boot packagegroup-core-ssh-openssh \
                  kernel-modules \
-                 i2c-tools \
-                 libgpiod \
-                 libgpiod-dev \
-                 libgpiod-tools \
                  libstdc++ \
-                 srp \
+                 srp-qemu \
                  srp-user \
                  srp-recover \
-                 srp-mount \
 "
 
 IMAGE_LINGUAS = " "
@@ -20,5 +15,5 @@ LICENSE = "MIT"
 inherit core-image
 
 IMAGE_ROOTFS_SIZE ?= "8192"
-IMAGE_ROOTFS_EXTRA_SPACE = "50000"
-DISTRO = "poky-tiny" 
+IMAGE_ROOTFS_EXTRA_SPACE = "800000"
+DISTRO = "poky" 

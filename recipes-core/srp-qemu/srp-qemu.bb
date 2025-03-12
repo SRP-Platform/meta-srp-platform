@@ -19,13 +19,7 @@ do_install () {
     install -d ${D}/srp
     install -d ${D}/srp/opt
     install -d ${D}/srp/opt/cpu_srp
-    # install -d ${D}/persistance
-    # install -d ${D}/logs
     chmod 0755 ${D}/srp
-    # chmod 0666 ${D}/persistance
-    # touch ${D}/persistance/.keep
-    # chmod 0666 ${D}/logs
-    # touch ${D}/logs/.keep
     install -d ${D}${sysconfdir}/init.d/ 
     install -c -m 755 ${UNPACKDIR}/${INITSCRIPT_NAME} ${D}${sysconfdir}/init.d/${INITSCRIPT_NAME} 
 
@@ -40,6 +34,4 @@ RDEPENDS:${PN} = "bash"
 FILES:${PN} += "\
     /srp/opt/cpu_srp/start_up.sh \
     /srp/opt/cpu_srp/network_interface.sh  \
-    # /persistance/.keep \
-    # /logs/.keep \
 "
